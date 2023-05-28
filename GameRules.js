@@ -40,10 +40,10 @@ export default class GameRules {
     const rules = {};
 
     for (let i = 0; i < this.moves.length; i++) {
-      const q = (this.moves.length - 1) / 2;
+      const quantity = (this.moves.length - 1) / 2;
       const move = this.moves[i];
-      const beats = this.getBeats(i, q);
-      const loses = this.getLoses(i, q);
+      const beats = this.getBeats(i, quantity);
+      const loses = this.getLoses(i, quantity);
       rules[move] = { beats, loses };
     }
 
